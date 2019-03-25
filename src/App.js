@@ -1,25 +1,35 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+// import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import Card from "./components/Card";
+import ButtonUp from "./components/ButtonUp";
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      categorias: [
+        "Bebidas",
+        "Massas",
+        "Sobremesas",
+        "Lanches",
+        "Almoço",
+        "Salgados",
+        "Bolos",
+        "Tortas"
+      ]
+    };
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <ul className="CategoriesList">
+          {this.state.categorias.map(categoria => (
+            <Card categoria={categoria} />
+          ))}
+        </ul>
+        <ButtonUp />
       </div>
     );
   }

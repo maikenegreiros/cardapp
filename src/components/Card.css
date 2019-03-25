@@ -1,0 +1,15 @@
+.CategoryItem {
+  list-style: none;
+  background-color: #295191;
+  color: white;
+  font-family: "Six Caps", sans-serif;
+  font-size: 3em;
+  text-align: center;
+  padding: 20px 0;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+.CategoryItem p {
+  margin: 0;
+}
